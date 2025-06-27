@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ma Boutique en Ligne</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Ma Boutique</h1>
+    <nav>
+      <a href="#">Accueil</a>
+      <a href="#">Produits</a>
+      <a href="#" id="panier-btn">Panier (<span id="panier-count">0</span>)</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Nos Produits</h2>
+    <div class="produits">
+      <div class="produit">
+        <img src="images/produit1.jpg" alt="Produit 1">
+        <h3>Produit 1</h3>
+        <p>19,99 €</p>
+        <button onclick="ajouterAuPanier('Produit 1', 19.99)">Ajouter</button>
+      </div>
+      <div class="produit">
+        <img src="images/produit2.jpg" alt="Produit 2">
+        <h3>Produit 2</h3>
+        <p>29,99 €</p>
+        <button onclick="ajouterAuPanier('Produit 2', 29.99)">Ajouter</button>
+      </div>
+      <!-- Ajoute plus de produits ici -->
+    </div>
+  </main>
+
+  <div id="panier" class="panier">
+    <h2>Votre Panier</h2>
+    <ul id="liste-panier"></ul>
+    <p>Total : <span id="total">0.00</span> €</p>
+    <button onclick="viderPanier()">Vider</button>
+    <button onclick="payer()">Payer</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
